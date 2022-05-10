@@ -1,0 +1,28 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.playground {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  height: 100px;
+  width: 300px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-fire {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.fa-snowman {
+  font-size: 40px;
+}
