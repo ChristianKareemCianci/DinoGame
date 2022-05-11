@@ -1,11 +1,28 @@
 <div class="mainContainer">
   <div class="playground">
-    <i class="fa-solid fa-snowman" [@jump]="jumpState"></i>
-    <i class="fa-solid fa-fire" [@fire]="fireState"></i>
+    <div [@melt]="meltingState">
+      <i class="fa-solid fa-snowman" [@jump]="jumpState" #snowman></i>
+    </div>
+    <i class="fa-solid fa-fire" [@fire]="fireState" #fire></i>
   </div>
 </div>
 <hr />
 <div class="buttonContainer">
-  <button class="btn btn-success" (click)="onStart()">Start</button>
+  <button
+    class="btn btn-success"
+    (click)="onStart()"
+    [disabled]="isAnimationGoing"
+  >
+    Start
+  </button>
   <button class="btn btn-primary" (click)="onJump()">Jump</button>
+  <button (click)="onMelt()">Melt</button>
+  <button (click)="onStop()">Stop Animation</button>
 </div>
+
+<div
+  class="gameover"
+  *ngIf="isGameover && showingDiv"
+  (click)="onClose()"
+></div>
+<p class="gameover-p" *ngIf="isGameover && showingDiv">GAME OVER</p>

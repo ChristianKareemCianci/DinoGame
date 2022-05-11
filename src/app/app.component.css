@@ -21,6 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
+  font-size: 15px;
   position: absolute;
   top: 135px;
 }
@@ -29,5 +30,27 @@
   font-size: 40px;
   position: relative;
   left: 50px;
-  
 }
+
+.gameover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 97vw;
+  height: 97vh;
+  background-color: rgba(39, 39, 39, 0.5);
+  z-index: 0.95;
+}
+
+.gameover-p {
+  width: 40%;
+  height: 20%;
+  background-color: #fff;
+  color: red;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: 1;
+}
+
+/* jojo alla fine muore (non sei l'unico che lascia messaggi segreti) */
