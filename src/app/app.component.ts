@@ -1,5 +1,6 @@
 import {
   animate,
+  keyframes,
   state,
   style,
   transition,
@@ -17,14 +18,14 @@ import { Component } from '@angular/core';
         'left',
         style({
           transform: 'translateX(0)',
-          position: 'absolute',
+          // position: 'relative',
         })
       ),
       state(
         'right',
         style({
           transform: 'translateX(200px)',
-          position: 'absolute',
+          // position: 'relative',
         })
       ),
       transition('right => left', animate(1000)),
@@ -34,18 +35,55 @@ import { Component } from '@angular/core';
         'up',
         style({
           transform: 'translateY(-50px)',
-          position: 'absolute',
+          // position: 'absolute',
         })
       ),
       state(
         'down',
         style({
           transform: 'translateY(0)',
-          position: 'absolute',
         })
       ),
-      transition('down => up', animate(500)),
-      transition('up => down', animate(500)),
+      transition(
+        'down => up',
+        animate(
+          300,
+          keyframes([
+            style({
+              offset: 0,
+              transform: 'translateY(0)',
+            }),
+            style({
+              offset: 0.7,
+              transform: 'translateY(-50px)',
+            }),
+            style({
+              offset: 1,
+              transform: 'translateY(-50px)',
+            }),
+          ])
+        )
+      ),
+      transition(
+        'up => down',
+        animate(
+          300,
+          keyframes([
+            style({
+              offset: 0,
+              transform: 'translateY(-50px)',
+            }),
+            style({
+              offset: 0.3,
+              transform: 'translateY(-50px)',
+            }),
+            style({
+              offset: 1,
+              transform: 'translateY(0)',
+            }),
+          ])
+        )
+      ),
     ]),
   ],
 })
@@ -67,6 +105,6 @@ export class AppComponent {
     this.jumpState = 'up';
     setTimeout(() => {
       this.jumpState = 'down';
-    }, 500);
+    }, 300);
   }
 }
