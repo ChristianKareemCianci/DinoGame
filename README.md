@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # DinoGameGit
+=======
+# DinoGame
+>>>>>>> c4caefd32de5b23aec015365bcaa2ea4f854d122
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 

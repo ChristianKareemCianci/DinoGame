@@ -1,0 +1,11 @@
+<div class="mainContainer">
+  <div class="playground">
+    <i class="fa-solid fa-snowman" [@jump]="jumpState"></i>
+    <i class="fa-solid fa-fire" [@fire]="fireState"></i>
+  </div>
+</div>
+<hr />
+<div class="buttonContainer">
+  <button class="btn btn-success" (click)="onStart()">Start</button>
+  <button class="btn btn-primary" (click)="onJump()">Jump</button>
+</div>

@@ -25,7 +25,11 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
+<<<<<<< HEAD
       dir: require('path').join(__dirname, './coverage/dino-game-git'),
+=======
+      dir: require('path').join(__dirname, './coverage/dino-game'),
+>>>>>>> c4caefd32de5b23aec015365bcaa2ea4f854d122
       subdir: '.',
       reporters: [
         { type: 'html' },
