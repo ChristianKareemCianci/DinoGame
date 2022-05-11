@@ -15,7 +15,9 @@
   >
     Start
   </button>
-  <button class="btn btn-primary" (click)="onJump()">Jump</button>
+  <button class="btn btn-primary" (click)="onJump()" [disabled]="isGameover">
+    Jump
+  </button>
   <button (click)="onMelt()">Melt</button>
   <button (click)="onStop()">Stop Animation</button>
 </div>
