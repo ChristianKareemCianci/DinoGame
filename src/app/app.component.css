@@ -21,14 +21,13 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 135px;
 }
 
 .fa-snowman {
   font-size: 40px;
-  position: absolute;
-  top: 110px;
-  left: 350px;
+  position: relative;
+  left: 50px;
+  
 }

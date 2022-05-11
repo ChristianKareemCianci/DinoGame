@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {
   animate,
   keyframes,
@@ -8,18 +6,11 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
->>>>>>> c4caefd32de5b23aec015365bcaa2ea4f854d122
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-<<<<<<< HEAD
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'DinoGameGit';
-=======
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('fire', [
@@ -56,14 +47,14 @@ export class AppComponent {
       transition(
         'down => up',
         animate(
-          300,
+          250,
           keyframes([
             style({
               offset: 0,
               transform: 'translateY(0)',
             }),
             style({
-              offset: 0.7,
+              offset: 0.8,
               transform: 'translateY(-50px)',
             }),
             style({
@@ -76,14 +67,14 @@ export class AppComponent {
       transition(
         'up => down',
         animate(
-          300,
+          250,
           keyframes([
             style({
               offset: 0,
               transform: 'translateY(-50px)',
             }),
             style({
-              offset: 0.3,
+              offset: 0.2,
               transform: 'translateY(-50px)',
             }),
             style({
@@ -116,5 +107,4 @@ export class AppComponent {
       this.jumpState = 'down';
     }, 300);
   }
->>>>>>> c4caefd32de5b23aec015365bcaa2ea4f854d122
 }
