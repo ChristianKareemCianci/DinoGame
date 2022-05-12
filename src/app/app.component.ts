@@ -150,6 +150,7 @@ export class AppComponent implements OnDestroy {
   }
 
   onClose() {
+    this.meltingState = 'notMelted';
     this.showingDiv = false;
   }
 
