@@ -58,4 +58,22 @@
   z-index: 1;
 }
 
+.gameover-p p {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  flex-wrap: wrap;
+}
+
+.gameover-p i {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.gameover-p span {
+  height: fit-content;
+  align-self: center;
+}
 /* jojo alla fine muore (non sei l'unico che lascia messaggi segreti) */
