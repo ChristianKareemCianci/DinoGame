@@ -38,6 +38,7 @@ import { interval, Subscription } from 'rxjs';
         })
       ),
       transition('right => left', animate(1000)),
+      transition('*=>reset', animate(400)),
     ]),
     trigger('jump', [
       state(
@@ -127,6 +128,7 @@ export class AppComponent implements OnDestroy {
 
   onStart() {
     this.meltingState = 'notMelted';
+    this.fireState = 'right';
     this.showingDiv = true;
     this.isGameover = false;
     this.isAnimationGoing = true;
@@ -176,9 +178,12 @@ export class AppComponent implements OnDestroy {
       this.isGameover = true;
       this.onMelt();
 
-      setTimeout(() => {
-        this.onStop();
-      }, 400);
+      this.onStop();
+
+      // setTimeout(() => {
+      //   this.onStop();
+      //   this.fireState = 'left';
+      // }, 400);
     }
   }
 
@@ -196,7 +201,9 @@ export class AppComponent implements OnDestroy {
         this.animation();
       }, 1000);
       this.subscription = interval(100).subscribe(() => {
-        this.check();
+        if (!this.isGameover) {
+          this.check();
+        }
       });
     } else {
       this.subscription.unsubscribe();
