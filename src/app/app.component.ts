@@ -99,7 +99,7 @@ import { interval, Subscription } from 'rxjs';
       state(
         'melted',
         style({
-          transform: 'scale(1.6, 0.2) translateY(50px)',
+          transform: 'scale(1.6, 0.2) translateY(70px)',
         })
       ),
       transition('*=> melted', animate(400)),
@@ -174,6 +174,7 @@ export class AppComponent implements OnDestroy {
     ) {
       this.isGameover = true;
       this.onMelt();
+
       setTimeout(() => {
         this.onStop();
       }, 400);

@@ -14,7 +14,12 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.buttonContainer button {
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .fa-fire {
@@ -48,7 +53,7 @@
   background-color: #fff;
   color: red;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 30%;
   z-index: 1;
 }
